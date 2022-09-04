@@ -15,9 +15,10 @@ int main() {
             counts.push_back(1);
         }
         else{
-            for (int j = 0; j < v.size(); j++)if (v[j] == temp) { if (++counts[j] >= 4)flag = true; }
+            for (int j = 0; j < v.size(); j++)if (v[j] == temp) { if (++counts[j] >= 4)flag = true;break; }
             else if (v.size() - 1 == j) { v.push_back(temp); counts.push_back(1); }
         }
+        if (flag)break;
     }
     cout << (flag ? "YES" : "NO");
     return 0;
