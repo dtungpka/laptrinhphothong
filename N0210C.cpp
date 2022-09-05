@@ -1,9 +1,16 @@
-#include<bits/stdc++.h>
-int NEG(int a,int b) {return ((((a)<0) || ((b)<0) && !((a)<0) && ((b)<0)) ? 1 : 0);}
-int main(){
-    
-    double a,b;
-    std::cin >> a >> b;
-    std::cout<<(abs(int(b+1)-int(a+1)) + NEG(a,b));
-    return 0;
+
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	double a, b;
+	cin >> a >> b;
+	long long c = (long long)a,d=(long long)b;
+	c = a - c > 0 ? a+1 : a ;
+	d = b - d >= 0 ? b : b - 1;
+	cout << (d - c + 1);
+
+	return 0;
 }
