@@ -3,10 +3,10 @@
 using namespace std;
 int main(){
     //found = max int
-    int n,k,found = 2147483647;
+    long long n,k,found = 2147483647;
     cin>>n>>k;
-    for (int i = 0; i < n; i++){
-        int x;
+    for (long long i = 0; i < n; i++){
+        long long x;
         cin>>x;
         if (x > k && x < found){
             found = x;
